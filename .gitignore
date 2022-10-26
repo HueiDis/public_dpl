@@ -1,0 +1,5 @@
+# IDE output files and settings
+.idea
+.vscode/
+.history/
+debug

@@ -1,0 +1,84 @@
+// References: https://www.zhangxinxu.com/wordpress/2018/01/css-caret-color-first-line/
+@supports (-webkit-mask: none) and (not (cater-color: $loginCursorColor)) {
+  .login-container .el-input {
+    input { color: $loginCursorColor; }
+    input::first-line { color: $loginBg; }
+  }
+}
+
+.logo {
+  margin-top: 20px;
+}
+
+.login-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .el-input {
+    display: inline-block;
+    height: 47px;
+    width: 85%;
+
+    input {
+      border: 0px;
+      border-radius: 0px;
+      padding: 12px 5px 12px 15px;
+      caret-color: $loginCursorColor;
+      -webkit-appearance: none;
+
+      &:-webkit-autofill {
+        box-shadow: 0 0 0px 1000px $lightGray inset !important;
+        -webkit-text-fill-color: $light-blue !important;
+      }
+    }
+  }
+}
+
+.login-container {
+  .set-language {
+    //color: #fff;
+    position: absolute;
+    top: 5px;
+    font-size: 24px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .login-form {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .svg-container {
+    padding: 6px 5px 6px 15px;
+    color: $darkGray;
+    vertical-align: middle;
+    width: 30px;
+    display: inline-block;
+  }
+  .show-pwd {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 16px;
+    color: $darkGray;
+    cursor: pointer;
+    user-select: none;
+  }
+  .mode_radio{
+    margin-bottom: 25px;
+  }
+  
+  .el-form-item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .el-tabs__item{
+    width: 140px;
+  }
+}
